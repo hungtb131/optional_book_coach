@@ -1,27 +1,33 @@
 package book;
 
 public class Book {
-    private   String bookCode;
-    String name;
-    private String author;
-    int price;
+    private int bookCode,price;
+    private String name,author;
 
-    public Book(String bookCode, String name, String author, int price) {
+    public Book() {
+    }
+
+    public Book(int bookCode, int price, String name, String author) {
         this.bookCode = bookCode;
+        this.price = price;
         this.name = name;
         this.author = author;
-        this.price = price;
-    }
-    public Book(){
-
     }
 
-    public String getBookCode() {
+    public int getBookCode() {
         return bookCode;
     }
 
-    public void setBookCode(String bookCode) {
+    public void setBookCode(int bookCode) {
         this.bookCode = bookCode;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getName() {
@@ -40,21 +46,13 @@ public class Book {
         this.author = author;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
         return "Book{" +
-                "bookCode='" + bookCode + '\'' +
+                "bookCode=" + bookCode +
+                ", price=" + price +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
-            ", price=" + price +
-            '}';
-}
+                '}';
+    }
 }
